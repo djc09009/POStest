@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>POSシステム</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+<body>
+
+  <h1>POSシステム</h1>
+
+  <div class="main-layout">
+    <!-- 生活必需品 -->
+    <div class="category-column">
+      <h2>項目A</h2>
+      <div id="essentialList" class="category"></div>
+    </div>
+
+    <!-- 消耗品 -->
+    <div class="category-column">
+      <h2>項目B</h2>
+      <div id="consumableList" class="category"></div>
+    </div>
+  </div>
+
+  <!-- カート -->
+  <div class="cart">
+    <h2>カート</h2>
+    <div id="cartItems"></div>
+    <p class="total">合計: ￥<span id="total">0</span></p>
+    <button onclick="checkout()">支払い</button>
+  </div>
+
+  <!-- 支払い履歴 -->
+  <div class="history">
+    <h2>支払い履歴</h2>
+    <button onclick="exportHistoryToExcel()">履歴をExcelで保存</button>
+    <div id="historyList"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 2rem auto;
+    max-width: 900px;
+  }
+  
+  h2 {
+    margin-top: 30px;
+  }
+  
+  .main-layout {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .category-column {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .cart, .history {
+    margin-top: 40px;
+  }
+  
+  .category {
+    margin-bottom: 20px;
+  }
+  
+  .product, .cart-item, .history-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .essential-btn {
+    background-color: lightblue;
+    border: none;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .essential-btn:hover {
+    background-color: deepskyblue;
+    color: white;
+  }
+  
+  .consumable-btn {
+    background-color: lightsalmon;
+    border: none;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .consumable-btn:hover {
+    background-color: tomato;
+    color: white;
+  }
+  
+  .total {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  button {
+    padding: 4px 8px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-left: 5px;
+    white-space: nowrap;
+  }
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  .small-btn {
+    background-color: #f44336;
+  }
+  .small-btn:hover {
+    background-color: #d32f2f;
+  }
+  
+  /* 이력 영역을 고정 크기로 하고 내부 스크롤만 되도록 */
+  .history {
+    background: #f9f9f9;
+    padding: 10px;
+    max-height: 300px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #historyList {
+    overflow-y: auto;
+    flex-grow: 1;
+    margin-top: 10px;
+  }
+  
+  @media screen and (max-width: 700px) {
+    .main-layout {
+      flex-direction: column;
+    }
+  }
